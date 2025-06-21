@@ -1,7 +1,7 @@
-# projeto1-edii
-Desenvolver uma classe em Python que implemente a Tabela Hash (Mapa Hash).
+# Verificador de Similaridade Textual em Python com MinHashing
+Desenvolver uma ferramenta Python, via linha de comando (CLI), que compara documentos e calcula um índice de similaridade usando MinHashing.
 
-<a href="https://github.com/tiagopessoalima/ED2/blob/main/Semana_10_(ED2).pdf">requisito</a>
+<a href="https://github.com/tiagopessoalima/ED2/blob/main/Semana_10_(ED2).pdf">Requisitos do projeto</a>
 
 # HashSimPy
 
@@ -9,7 +9,7 @@ Este projeto implementa o algoritmo **HashSimPy**, uma implementação eficiente
 
 ---
 
-## O que é MinHash?
+## -> O que é MinHash?
 
 O **MinHash** (ou "Minimum Hashing") é uma técnica para estimar rapidamente a semelhança de dois conjuntos. A probabilidade de que um determinado valor MinHash venha de um dos itens compartilhados é igual à semelhança de Jaccard.
 
@@ -20,10 +20,10 @@ Por exemplo, Chris McCormick mostrou que, em 10.000 artigos, computar todas as J
 
 ---
 
-## Índice de Jaccard
+## -> Índice de Jaccard
 Quantifica a similaridade entre dois conjuntos A e B como a razão entre o tamanho da interseção e da união: <i>J(A,B) = |A ∩ B| / |A ∪ B|.</i> É 0 se A e B são disjuntos, e 1 se são iguais.
 
-## Shingling
+## -> Shingling
 Associa um conjunto de subsequencias de tokens a um documento, A partir disso reduz a listas de tokens a uma lista de hashes, que essas podem ser comparadas diretamente utilizando diferença, união e interseção de conjuntos para determinar a dissimilaridade ou distancia. <a href="https://www.cos.ufrj.br/uploadfile/publicacao/2929.pdf#:~:text=Jaccard%20,%282.2">Podemos ver melhor nesse link</a>
 
 ## Estrutura projeto
@@ -42,19 +42,19 @@ Associa um conjunto de subsequencias de tokens a um documento, A partir disso re
 └── README.md # Documentação do projeto
 ```
 
-## 🚀 Funcionalidades
+## -> Funcionalidades
 
 - ✅ Geração de shingles (k-gramas)
 - ✅ Cálculo de MinHash signatures
 - ✅ Estimativa de similaridade de Jaccard com base nas assinaturas
 - ✅ Exemplo de uso com documentos de texto
-- ✅ Visualização de resultados (opcional)
+- ✅ Visualização de resultados via linha de comando
 
 ---
 
-## 🛠️ Como usar
+## Como usar?
 
-### 📦 Instalação
+### Instalação
 
 Clone o repositório:
 
@@ -62,3 +62,9 @@ Clone o repositório:
 git clone https://github.com/raphaellyzzz/projeto1-edii
 cd projeto1-edii
 ```
+
+## Bibliografia utilizada
+- https://en.wikipedia.org/wiki/MinHash
+- https://milvus.io/pt/blog/minhash-lsh-in-milvus-the-secret-weapon-for-fighting-duplicates-in-llm-training-data.md
+- https://mccormickml.com/2015/06/12/minhash-tutorial-with-python-code/
+- https://www-di.inf.puc-rio.br/~casanova/Disciplinas/INF1331/Slides/03.2-03.3-Shingling-MinHash.pdf
