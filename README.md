@@ -30,11 +30,11 @@ Associa um conjunto de subsequencias de tokens a um documento, A partir disso re
 
 ```plaintext
 ├── __init__.py # Indicar que é um pacote Python
-├── cli.py # Interface de linha de comando
-├── comparar.py # Lógica para comparar arquivos de texto
-├── minhashing.py # Algoritmo de MinHash
-├── preprocessamento.py # Limpeza e normalização de texto
-├── shingling.py # Geração de shingles (k-gramas)
+├── cli.py # script principal de interface de linha de comando. realiza o parse de argumentos, orquestra as chamadas aos demais módulos e apresenta os resultados ao usuário via linha de comando.
+├── comparar.py # funções para comparar duas assinaturas de MinHash (por exemplo, calculando a fração de posições coincidentes) e estimar a similaridade.
+├── minhashing.py # implementação do algoritmo MinHash, que recebe um conjunto de shingles e retorna a assinatura de hash de tamanho fixo.
+├── preprocessamento.py # funções para ler arquivos de texto e realizar pré-processamento
+├── shingling.py # funções para gerar o conjunto de k-shingles de um texto pré-processado.
 ├── testes/ # Arquivos de teste
 │ ├── sem_texto.txt
 │ ├── texto_base.txt
@@ -62,6 +62,15 @@ Clone o repositório:
 git clone https://github.com/raphaellyzzz/projeto1-edii
 cd projeto1-edii
 ```
+
+Execute via CLI
+
+```bash
+python cli.py <arquivo1> <arquivo2> [--k K] [--num_hashes N]
+```
+<ul>arquivo1 e arquivo2 são os caminhos para os arquivos de texto a serem comparados.</ul>
+<ul>--k (opcional) define o tamanho do shingle (default = 3).</ul>
+<ul>--num_hashes (opcional) define o número de funções de hash usadas no MinHash (default = 100).</ul>
 
 ## Bibliografia utilizada
 - https://en.wikipedia.org/wiki/MinHash
