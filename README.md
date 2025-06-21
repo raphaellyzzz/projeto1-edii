@@ -5,7 +5,7 @@ Desenvolver uma ferramenta Python, via linha de comando (CLI), que compara docum
 
 # HashSimPy
 
-Este projeto implementa o algoritmo **HashSimPy**, uma implementação eficiente para virificar a similaridade entre dois documento <i>.txt</i>. Utilizando o princípio de MinHash juntamente com a semelhança de Jaccard.
+Este projeto implementa o algoritmo **HashSimPy**, uma implementação eficiente para virificar a similaridade entre dois documento <i>.txt</i>. Utiliza o princípio de MinHash juntamente com a semelhança de Jaccard para retornar a semelhança em %.
 
 ---
 
